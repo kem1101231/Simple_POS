@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+	<style type="text/css">
+		.font-small{
+			font-size: 12px;
+		}
+		.wide-collumn{
+			min-width:85px;
+		}
+	</style>
+	<div style="font-size: 30px;">Inventory</div>
+	<div>
+		<nav aria-label="breadcrumb" style="padding: 5px; width: 100%; font-size: 12px;">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item">Inventory</li>
+		    <li class="breadcrumb-item active" aria-current="page"><a href="/shipments/all/">All</a></li>
+		  </ol>
+		</nav>
+	</div>
+	<div class="panel panel-default">
+	  <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th class="font-small wide-collumn text-center">Item Name</th>
+		      <th class="font-small text-center">Batch</th>
+		      <th class="font-small text-center">Selling Price</th>
+		      <th class="font-small text-center">Qty.</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="font-small">Item Name</td>
+		      <td class="font-small">000</td>
+		      <td class="text-right font-small">000,000</td>
+		      <td class="text-right font-small">000</td>
+		    </tr>
+		     <tr>
+		      <td class="font-small">Item Name</td>
+		      <td class="font-small">000</td>
+		      <td class="text-right font-small">000,000</td>
+		      <td class="text-right font-small">000</td>
+
+		    </tr>
+		     <tr>
+		      <td class="font-small">Item Name</td>
+		      <td class="font-small">000</td>
+		      <td class="text-right font-small">000,000</td>
+		      <td class="text-right font-small">000</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+{% endblock %}

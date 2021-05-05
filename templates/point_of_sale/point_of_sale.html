@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div style="font-size: 30px;">Point Of Sale</div>
+
+	<div class="panel">
+		<div class="form-group">
+            
+        </div>
+		<form action="" method="POST">{% csrf_token %}
+		<div class="form-group">
+            <label for="text1" class="control-label col-lg-4" >Product Name</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control"  />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4" >Quantity</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control"  />
+	        </div>
+        </div>
+        <div style="padding-top: 20px;"><a href="/products/all/"><button class="btn btn-success btn-block"  role="submit">Check Out</button></a></div>
+        </form>
+	</div>	
+{% endblock %}

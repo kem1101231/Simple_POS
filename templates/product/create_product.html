@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div style="font-size: 30px;">Create Product</div>
+	<div>
+		<nav aria-label="breadcrumb" style="padding: 5px; width: 100%; font-size: 12px;">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item">Products</li>
+		    <li class="breadcrumb-item active" aria-current="page">Create</li>
+		  </ol>
+		</nav>
+	</div>
+	<div style="padding-bottom: 10px;"><a href="/products/all/"><button class="btn btn-sm btn-danger" style="width: 80px;float:right;">Cancel</button></a></div>
+	<div class="panel">
+		<div class="form-group">
+            
+        </div>
+		<form action="" method="POST">{% csrf_token %}
+		<div class="form-group">
+            <label for="text1" class="control-label col-lg-4" >Product Name</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control"  />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4" >Unit</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control"  />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4" >Description</label>
+			<div class="col-lg-8">
+	            <textarea type="text" value="" id="text1" class="form-control" ></textarea>
+	        </div>
+        </div>
+        <div style="padding-top: 20px;"><a href="/products/all/"><button class="btn btn-success btn-block"  role="submit">Save</button></a></div>
+        </form>
+	</div>	
+{% endblock %}

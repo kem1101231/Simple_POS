@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div class="panel panel-default">
+	<div style="font-size: 30px;">Products</div>
+	<div>
+		<nav aria-label="breadcrumb" >
+		  <ol class="breadcrumb" style="padding: 5px; width: 100%; font-size: 12px;">
+		    <li class="breadcrumb-item">Products</li>
+		    <li class="breadcrumb-item active" aria-current="page"><a href="/products/all/">All</a></li>
+		  </ol>
+		</nav>
+	</div></div>
+	<div style="padding-bottom: 10px; padding-top: 0px;"><a href="/products/create/"><button class="btn btn-sm btn-success" style="float:right; width: 80px;">New</button></a></div>
+	<div class="panel panel-default">
+	  <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Product Name</th>
+		      <th scope="col">Unit </th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>Item 1</td>
+		      <td>Pieces</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">2</th>
+		      <td>Item 2</td>
+		      <td>Kilos</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">3</th>
+		      <td>Item 3</td>
+		      <td>Meters</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+{% endblock %}

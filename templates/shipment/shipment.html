@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div style="font-size: 30px;">Shipments</div>
+	<div>
+		<nav aria-label="breadcrumb" style="padding: 5px; width: 100%; font-size: 12px;">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item">Shipments</li>
+		    <li class="breadcrumb-item active" aria-current="page"><a href="/shipments/all/">All</a></li>
+		  </ol>
+		</nav>
+	</div>
+	<div style="padding-bottom: 10px;"><a href="/shipments/create/"><button class="btn btn-sm btn-success" style="width: 80px;float:right;">New</button></a></div>
+	<div class="panel panel-default">
+	  <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Code</th>
+		      <th scope="col">Supplier</th>
+		      <th scope="col">Date</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		     <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		     <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>	
+{% endblock %}

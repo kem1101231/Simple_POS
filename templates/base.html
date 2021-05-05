@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/fontawesome.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet" />
+</head>
+<body>
+	<div id="mySidebar" class="sidebar">
+	 
+	  <a href="#">Point of Sale</a>
+	  <a href="/inventory/all">Inventory</a>
+      <a href="/products/all/">Products</a>
+       <a href="/shipments/all/">Shipment</a>	
+	  <a href="#">Reports</a>	
+  </div>
+
+	<div id="main">
+	  <button class="openbtn" id="button_open">&#9776;</button>
+	  {% block content %}
+	  {% endblock %}
+	</div>
+  <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/side_bar.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/fontawesome.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/fontawesome.min.js' %}"></script>
+</body>
+</html>

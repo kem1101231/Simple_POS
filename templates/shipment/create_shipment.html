@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<div style="font-size: 30px;">Add Shipment</div>
+	<div>
+		<nav aria-label="breadcrumb" style="padding: 5px; width: 100%; font-size: 12px;">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item">Shipments</li>
+		    <li class="breadcrumb-item active" aria-current="page">Add</li>
+		  </ol>
+		</nav>
+	</div>
+	<div style="padding-bottom: 10px;"><a href="/shipments/all/"><button class="btn btn-sm btn-danger" style="width: 80px;float:right;">Cancel</button></a></div>
+	<div class="panel">
+		<div class="form-group">
+            
+        </div>
+		<form action="" method="POST">{% csrf_token %}
+		<div class="form-group">
+            <label for="text1" class="control-label col-lg-4">Shipment Code</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control" />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4">Supplier</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control" />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4">OR Number</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control" />
+	        </div>
+        </div>
+        <div class="form-group">
+            <label for="text1" class="control-label col-lg-4">OR Date</label>
+			<div class="col-lg-8">
+	            <input type="text" value="" id="text1" class="form-control" />
+	        </div>
+        </div>
+        
+        <div class="form-group" style="padding-top: 10px;">
+            <label for="text1" class="control-label col-lg-4" style="font-size: 20px; font-weight: bold;">Included Items</label>
+			<div class="col-lg-8">
+	      <table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">Code</th>
+		      <th scope="col">Supplier</th>
+		      <th scope="col">Date</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		     <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		     <tr>
+		      <th scope="row">ABC-12345</th>
+		      <td>Supplier Name</td>
+		      <td>Month dd, YYYY</td>
+		    </tr>
+		    <tr>
+		    	<td rowspan="3">
+		    		<button class="btn btn-primary btn-sm" style=" width: 90px;"  data-toggle="modal"  data-target="#newReg" role="button" type="button">Add Item</button>
+		    	</td>
+		    </tr>
+		  </tbody>
+		</table>
+	        </div>
+        </div>
+
+        <div style="padding-top: 20px;"><a href="/products/all/"><button class="btn btn-sm btn-success btn-block" role="submit">Save</button></a></div>
+        </form>
+	</div>
+
+	<!-- ===================================================   Modal ==================================================================================  -->
+           
+                       <div class="modal fade" id="newReg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h4 class="modal-title" id="H4">Item Information</h4>
+                                    </div>
+                                    
+                                    <div class="modal-body">
+                                        <div class="panel panel-body" style="padding-top:0px; margin:0px;">
+                                            <form class="form-horizontal">
+                                              
+                                                <div class="form-group" style="margin-bottom:10px;">
+                                                    <label for="text1" class="control-label col-lg-4">Product </label>
+                                            
+                                                    <div class="col-lg-8">
+                                                        <input id="price" class="form-control" />
+                                                        <span id="errorpr"></span>
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="form-group" style="margin-bottom:10px;">
+                                                    <label for="text1" class="control-label col-lg-4">Quantity: </label>
+                                            
+                                                    <div class="col-lg-8" >
+                                                        <input id="quantity" class="form-control" />
+                                                        <span id="errorqu"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom:10px;">
+                                                    <label for="text1" class="control-label col-lg-4">Unit Price</label>
+                                            
+                                                    <div class="col-lg-8" >
+                                                        <input id="quantity" class="form-control" />
+                                                        <span id="errorqu"></span>
+                                                    </div>
+                                                </div>  
+                                            </form>
+                                        </div>
+                                    </div>
+                                        
+                                    <div class="modal-footer">
+                                           
+                                            <button id="addList" type="submit" class="btn btn-success" >Add to List</button>
+                                            
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<!-- ===================================================   Modal ==================================================================================  -->
+	
+{% endblock %}
