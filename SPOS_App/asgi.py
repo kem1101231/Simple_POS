@@ -1,5 +1,5 @@
 """
-ASGI config for SPOS_App_Django project.
+ASGI config for SPOS_App project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
