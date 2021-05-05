@@ -1,0 +1,14 @@
+version: "3.9"
+   
+services:
+
+  django:
+    build: .
+    image: django_simple_pos
+    command: python3 /opt/app/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/app
+    ports:
+      - "8199:8000"
